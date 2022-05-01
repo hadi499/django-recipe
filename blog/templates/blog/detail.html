@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="singlePost mt-3">
+        <div class="singlePostWrapper">
+          <img class="singlePostImg" src="{{ post.image.url }}" alt="" />
+          <h1 class="singlePostTitle mt-5">
+            {{ post.title }}
+            
+          </h1>
+          <div class="singlePostInfo">
+            <span>{{ post.date_posted|date:"F d, Y" }}</span>
+          </div>
+          <p class="singlePostDesc">{{ post.content|safe }}</p>
+   
+        </div>
+      </div>
+
+</div>
+
+
+  {% endblock content %}
